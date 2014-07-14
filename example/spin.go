@@ -21,6 +21,11 @@ func main() {
 	show(s, "Spin2", spin.Spin2)
 	show(s, "Spin3", spin.Spin3)
 	show(s, "Spin4", spin.Spin4)
+	show(s, "Spin5", spin.Spin5)
+	show(s, "Spin6", spin.Spin6)
+	show(s, "Spin7", spin.Spin7)
+	show(s, "Spin8", spin.Spin8)
+	show(s, "Spin9", spin.Spin9)
 }
 
 func show(s *spin.Spinner, name, frames string) {
