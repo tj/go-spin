@@ -13,6 +13,11 @@ var (
 	Spin2   = `◴◷◶◵`
 	Spin3   = `◰◳◲◱`
 	Spin4   = `◐◓◑◒`
+	Spin5   = `▉▊▋▌▍▎▏▎▍▌▋▊▉`
+	Spin6   = `▌▄▐▀`
+	Spin7   = `╫╪`
+	Spin8   = `■□▪▫`
+	Spin9   = `←↑→↓`
 	Default = Box1
 )
 
