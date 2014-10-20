@@ -20,6 +20,8 @@ for i := 0; i < 30; i++ {
   time.Sleep(100 * time.Millisecond)
 }
 ```
+## GIF FTW
+![](./go-spin.gif)
 
 # License
 
