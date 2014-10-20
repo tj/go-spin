@@ -3,12 +3,12 @@
 
  Little terminal spinner lib.
 
- View the [docs](http://godoc.org/github.com/visionmedia/go-spin).
+ View the [docs](http://godoc.org/github.com/tj/go-spin).
 
 ## Installation
 
 ```
-$ go get github.com/visionmedia/go-spin
+$ go get github.com/tj/go-spin
 ```
 
 ## Example
