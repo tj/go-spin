@@ -41,6 +41,12 @@ func (s *Spinner) Set(frames string) {
 	s.length = len(s.Frames)
 }
 
+// Current returns the current rune in the sequence.
+func (s *Spinner) Current() string {
+	r := s.Frames[s.pos%s.length]
+	return string(r)
+}
+
 // Next returns the next rune in the sequence.
 func (s *Spinner) Next() string {
 	r := s.Frames[s.pos%s.length]
