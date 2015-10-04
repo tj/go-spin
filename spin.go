@@ -23,7 +23,7 @@ var (
 
 // Spinner.
 type Spinner struct {
-	Frames []rune
+	frames []rune
 	length int
 	pos    int
 }
@@ -37,19 +37,19 @@ func New() *Spinner {
 
 // Set frames to the given string which must not use spaces.
 func (s *Spinner) Set(frames string) {
-	s.Frames = []rune(frames)
-	s.length = len(s.Frames)
+	s.frames = []rune(frames)
+	s.length = len(s.frames)
 }
 
 // Current returns the current rune in the sequence.
 func (s *Spinner) Current() string {
-	r := s.Frames[s.pos%s.length]
+	r := s.frames[s.pos%s.length]
 	return string(r)
 }
 
 // Next returns the next rune in the sequence.
 func (s *Spinner) Next() string {
-	r := s.Frames[s.pos%s.length]
+	r := s.frames[s.pos%s.length]
 	s.pos++
 	return string(r)
 }
