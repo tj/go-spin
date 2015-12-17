@@ -2,7 +2,7 @@ package main
 
 import "time"
 import "fmt"
-import ".."
+import "github.com/tj/go-spin"
 
 func main() {
 	s := spin.New()
