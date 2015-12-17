@@ -1,8 +1,11 @@
 package main
 
-import "time"
-import "fmt"
-import "github.com/tj/go-spin"
+import (
+	"fmt"
+	"time"
+
+	"github.com/tj/go-spin"
+)
 
 func main() {
 	s := spin.New()
