@@ -18,6 +18,7 @@ var (
 	Spin7   = `╫╪`
 	Spin8   = `■□▪▫`
 	Spin9   = `←↑→↓`
+	Spin10  = `⦾⦿`
 	Default = Box1
 )
 
