@@ -1,5 +1,7 @@
 package spin
 
+import "sync"
+
 // Spinner types.
 var (
 	Box1    = `⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏`
@@ -21,8 +23,9 @@ var (
 	Default = Box1
 )
 
-// Spinner.
+// Spinner is exactly what you think it is.
 type Spinner struct {
+	mu     sync.Mutex
 	frames []rune
 	length int
 	pos    int
@@ -37,18 +40,24 @@ func New() *Spinner {
 
 // Set frames to the given string which must not use spaces.
 func (s *Spinner) Set(frames string) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
 	s.frames = []rune(frames)
 	s.length = len(s.frames)
 }
 
 // Current returns the current rune in the sequence.
 func (s *Spinner) Current() string {
+	s.mu.Lock()
+	defer s.mu.Unlock()
 	r := s.frames[s.pos%s.length]
 	return string(r)
 }
 
 // Next returns the next rune in the sequence.
 func (s *Spinner) Next() string {
+	s.mu.Lock()
+	defer s.mu.Unlock()
 	r := s.frames[s.pos%s.length]
 	s.pos++
 	return string(r)
@@ -56,5 +65,7 @@ func (s *Spinner) Next() string {
 
 // Reset the spinner to its initial frame.
 func (s *Spinner) Reset() {
+	s.mu.Lock()
+	defer s.mu.Unlock()
 	s.pos = 0
 }
